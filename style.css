@@ -1,0 +1,261 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, Arial, sans-serif;
+  background: radial-gradient(circle at top, #0b2d3b, #092733, #08212d, #061a24);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Title */
+.title {
+  margin-top: 60px;
+  font-size: 52px;
+  font-weight: 700;
+  color: #c9f6ff;
+  text-shadow: 0 0 25px cyan;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 26px;
+  margin-top: 5px;
+  color: #aefaff;
+  text-shadow: 0 0 10px cyan;
+}
+
+/* Buttons */
+.button {
+  background: rgba(0,0,0,0.55);
+  border: 2px solid cyan;
+  padding: 14px 32px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  border-radius: 12px;
+  transition: 0.25s ease;
+}
+.button:hover {
+  background: rgba(0,255,255,0.18);
+  box-shadow: 0 0 14px cyan;
+}
+
+/* Difficulty container */
+.diff-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  gap: 25px;
+}
+
+/* Each difficulty button with circle */
+.diff-btn {
+  position: relative;
+  width: 150px;
+  padding: 14px 0;
+  font-size: 20px;
+  border-radius: 12px;
+}
+
+/* Circle indicator */
+.diff-indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  left: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.25s ease;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+/* Active glowing circle */
+.active-indicator {
+  background: cyan;
+  box-shadow: 0 0 12px cyan;
+  border-color: cyan;
+}
+
+/* Input Fields */
+.input {
+  width: 420px;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 2px solid cyan;
+  background: rgba(0,0,0,0.45);
+  color: white;
+  margin: 10px 0;
+}
+
+/* Game Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 110px);
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.cell {
+  width: 110px;
+  height: 110px;
+  font-size: 48px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.55);
+  border: 2px solid cyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.cell:hover {
+  box-shadow: 0 0 15px cyan;
+}
+
+/* Scoreboard */
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 14px;
+  border: 2px solid cyan;
+}
+.score-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+/* Win / Draw Popup */
+.result-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px 45px;
+  border: 2px solid cyan;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 999;
+  box-shadow: 0 0 25px cyan;
+}
+
+.result-popup h2 {
+  font-size: 32px;
+  color: #b6ffff;
+  margin-bottom: 18px;
+  text-shadow: 0 0 12px cyan;
+}
+
+.result-popup button {
+  margin-top: 15px;
+}
+
+/* ============================
+   RESPONSIVE FIXES – MOBILE 
+   ============================ */
+
+@media (max-width: 768px) {
+
+  .title {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  /* Game Layout Stack */
+  #gameBoard,
+  .sidebar {
+    margin: 0 auto;
+  }
+
+  /* Stack grid + scoreboard vertically */
+  .game-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  /* Fix the grid size */
+  .grid {
+    grid-template-columns: repeat(3, 85px);
+    gap: 10px;
+  }
+
+  .cell {
+    width: 85px;
+    height: 85px;
+    font-size: 38px;
+  }
+
+  /* Scoreboard width adjustments */
+  .sidebar {
+    width: 85%;
+    min-width: 260px;
+  }
+
+  /* Buttons spacing */
+  .button {
+    padding: 12px 26px;
+    font-size: 18px;
+  }
+
+  .button-group {
+    margin-top: 18px;
+  }
+
+  /* Difficulty buttons */
+  .diff-container {
+    width: 100%;
+  }
+
+  .diff-btn {
+    width: 30%;
+    min-width: 110px;
+  }
+
+  /* Selection indicator */
+  .select-indicator {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 70px);
+    gap: 8px;
+  }
+
+  .cell {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
