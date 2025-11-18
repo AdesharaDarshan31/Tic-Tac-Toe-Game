@@ -7,7 +7,9 @@ Game Modes :-
 Both players play on the same device using X and O.
 
 2. Player vs AI
+ 
 There are three difficulty levels:
+
 Easy :
 Makes random moves, Very easy to win
 
