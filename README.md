@@ -8,16 +8,14 @@ Both players play on the same device using X and O.
 
 2. Player vs AI
 There are three difficulty levels:
-Easy : Makes random moves
-       Very easy to win
+Easy :
+Makes random moves, Very easy to win
 
-Medium : Mix of smart and random moves
-         Gives a balanced challenge
+Medium : 
+Mix of smart and random moves, Gives a balanced challenge
 
-Hard (Minimax) : Uses the minimax algorithm
-                 Predicts all possible outcomes
-                 Always makes the best move
-                 Almost impossible to beat
+Hard (Minimax) : 
+Uses the minimax algorithm, Predicts all possible outcomes, Always makes the best move, Almost impossible to beat
 
 Features :-
 Neon-themed UI
